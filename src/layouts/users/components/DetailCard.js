@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import * as React from 'react';
 import CloseIcon from '@mui/icons-material/Close';
 import { styled } from '@mui/material/styles';
-import { Card, CardMedia, Modal, CircularProgress, OutlinedInput, DialogContentText, InputAdornment, IconButton, DialogActions, Dialog, DialogTitle, Button, DialogContent, Typography, Box, TextField, InputLabel, FormControl, Divider, Select, MenuItem } from '@mui/material';
+import { Card, CardMedia, Modal, CircularProgress, OutlinedInput, DialogContentText, InputAdornment, IconButton, DialogActions, Dialog, DialogTitle, Button, DialogContent, Typography, Box, TextField, InputLabel, FormControl, Select, MenuItem } from '@mui/material';
 import { green } from "@mui/material/colors";
 import CheckIcon from '@mui/icons-material/Check';
 
@@ -13,7 +13,7 @@ import MDButton from "components/MDButton";
 import MDSnackbar from "components/MDSnackbar";
 
 import { db, storage } from "../../../firebase";
-import { doc, deleteDoc, getDoc, updateDoc, arrayUnion } from "firebase/firestore";
+import { doc, deleteDoc, getDoc, updateDoc } from "firebase/firestore";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
