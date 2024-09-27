@@ -14,7 +14,7 @@ import * as React from 'react'
 import { Navigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "context/AuthContext";
-import { Group, HouseOutlined } from "@mui/icons-material";
+import { Group, HourglassBottom, HouseboatOutlined, HouseOutlined, HouseSiding, HouseSidingTwoTone, SmartDisplayTwoTone } from "@mui/icons-material";
 import DashboardIcon from '@mui/icons-material/Dashboard';
 
 
@@ -48,7 +48,7 @@ const routes = [
     type: "collapse",
     name: "Properties for sale",
     key: "admin/for-sale",
-    icon: <HouseOutlined />,
+    icon: <HouseboatOutlined />,
     route: "/admin/for-sale",
     component: <AdminAuthRoutes><ForSale /></AdminAuthRoutes>,
   },
@@ -57,7 +57,7 @@ const routes = [
     type: "collapse",
     name: "Properties for rent",
     key: "admin/for-rent",
-    icon: <HouseOutlined />,
+    icon: <HouseSiding />,
     route: "/admin/for-rent",
     component: <AdminAuthRoutes><ForRent /></AdminAuthRoutes>,
   },
@@ -67,7 +67,7 @@ const routes = [
     type: "collapse",
     name: "Rent & Sale both",
     key: "admin/rent-sale",
-    icon: <HouseOutlined />,
+    icon: <HouseSidingTwoTone />,
     route: "/admin/rent-sale",
     component: <AdminAuthRoutes><ForSaleRent /></AdminAuthRoutes>,
   },
@@ -77,7 +77,7 @@ const routes = [
     type: "collapse",
     name: "Show off",
     key: "admin/show-off",
-    icon: <HouseOutlined />,
+    icon: <SmartDisplayTwoTone />,
     route: "/admin/show-off",
     component: <AdminAuthRoutes><ShowOff /></AdminAuthRoutes>,
   },
