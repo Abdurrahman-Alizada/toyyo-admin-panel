@@ -13,7 +13,7 @@ import MDSnackbar from "components/MDSnackbar";
 // Assuming you have these Firebase imports set up
 import { db } from "../../../firebase";
 import { doc, deleteDoc, updateDoc } from "firebase/firestore";
-import {Checkbox} from '@mui/material';
+import { Checkbox } from '@mui/material';
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   '& .MuiDialogContent-root': {
@@ -308,8 +308,8 @@ function DetailCard({ propertyId, propertyData }) {
                 label="Renew Monthly"
               />
             </Box>
-          
-        
+
+
           </Box>
         </DialogContent>
         <DialogActions sx={{ justifyContent: 'center' }}>
@@ -353,6 +353,14 @@ function DetailCard({ propertyId, propertyData }) {
         </MDTypography>
         <MDBox display="flex" mt={1}>
           <MDTypography variant="button" fontWeight="medium">
+            Phone number:&nbsp;
+          </MDTypography>
+          <MDTypography variant="button">
+            {propertyData?.phoneNumber || 'Not specified'}
+          </MDTypography>
+        </MDBox>
+        <MDBox display="flex" mt={1}>
+          <MDTypography variant="button" fontWeight="medium">
             Type:&nbsp;
           </MDTypography>
           <MDTypography variant="button">
@@ -393,12 +401,32 @@ function DetailCard({ propertyId, propertyData }) {
         </MDBox>
         <MDBox display="flex" mt={1}>
           <MDTypography variant="button" fontWeight="medium">
-            Likes:&nbsp;
+            Boosted Property:&nbsp;
           </MDTypography>
           <MDTypography variant="button">
-            {propertyData?.likesCount || 0}
+            {propertyData?.boostProperty ? 'Yes' : 'No'}
           </MDTypography>
         </MDBox>
+        <MDBox display="flex" mt={1}>
+          <MDTypography variant="button" fontWeight="medium">
+            Show off:&nbsp;
+          </MDTypography>
+          <MDTypography variant="button">
+            {propertyData?.isShowOff ? 'Yes' : 'No'}
+          </MDTypography>
+        </MDBox>
+
+        <MDBox display="flex" mt={1}>
+          <MDTypography variant="button" fontWeight="medium">
+            keywords:&nbsp;
+          </MDTypography>
+          {propertyData?.keywords?.map((keyword, index) =>
+            <MDTypography key={index} variant="button">
+              {keyword},&nbsp;
+            </MDTypography>
+          )}
+        </MDBox>
+
       </MDBox>
     </>
   );

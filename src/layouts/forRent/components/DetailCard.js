@@ -391,14 +391,16 @@ function DetailCard({ propertyId, propertyData }) {
             {propertyData?.isRent ? 'Yes' : 'No'}
           </MDTypography>
         </MDBox>
+       
         <MDBox display="flex" mt={1}>
           <MDTypography variant="button" fontWeight="medium">
-            Likes:&nbsp;
+            Show off:&nbsp;
           </MDTypography>
           <MDTypography variant="button">
-            {propertyData?.likesCount || 0}
+            {propertyData?.isShowOff ? 'Yes' : 'No'}
           </MDTypography>
         </MDBox>
+       
       </MDBox>
     </>
   );

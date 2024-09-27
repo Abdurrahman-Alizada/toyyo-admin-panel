@@ -18,9 +18,7 @@ import {
   collapseText,
 } from "examples/Sidenav/styles/sidenavCollapse";
 
-// Amdin panel React context
 import { useMaterialUIController } from "context";
-import MDTypography from "components/MDTypography";
 
 function SidenavCollapse({ icon, name, active, ...rest }) {
   const [controller] = useMaterialUIController();

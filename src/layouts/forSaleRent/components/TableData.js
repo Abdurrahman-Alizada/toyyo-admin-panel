@@ -5,7 +5,6 @@ import React from "react";
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 import MDButton from "components/MDButton";
-import MDAvatar from "components/MDAvatar";
 
 // Firestore
 import { db } from "../../../firebase";
